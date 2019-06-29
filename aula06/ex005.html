@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 6 Curso em vídeo</title>
+    <style>
+        body {
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var numero = Number(prompt('Digite um número'));
+        document.write(`Número formatado com vírgula e duas casas decimais: ${numero.toFixed(2).replace('.', ',')}</br>`);
+        document.write(`Número formatado para real ${numero.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</br>`);
+        document.write(`Número formatado para dólar ${numero.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })}</br>`);
+        document.write(`Número formatado para euro ${numero.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' })}</br>`);
+        document.write(`2 ^ 2 = ` + (2 ** 2));
+    </script>
+</body>
+
+</html>

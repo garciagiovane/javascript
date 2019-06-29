@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primeiros passos DOM</title>
+    <style>
+        body {
+            background: rgb(105, 105, 250);
+            color: white;
+            font: normal 20pt arial;
+        }
+        #alert {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros passos DOM</h1>
+    <p>Passe o mouse aqui</p>
+    <div class="teste">Clique em mim</div>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="alert">
+        <p>Isso apareceu porque você utilizou o evento mousemove do JavaScript...</p>
+    </div>
+    <script>
+        window.document.write("Está escrito assim: " + p1.innerText);
+
+        var p1 = window.document.getElementsByTagName("p")[0];
+        p1.style.color = "green";        
+
+        var corpo = window.document.body;
+        corpo.style.background = "yellow";        
+
+        var div = window.document.querySelector("div.teste");
+        div.style.color = "grey";
+
+        var alerta = document.getElementById("alert");
+
+        p1.onmousemove = function () {
+            alerta.style.display = "block";
+        };
+        p1.onmouseleave = function(){
+            alerta.style.display = "none";
+        }
+        
+    </script>
+</body>
+</html>

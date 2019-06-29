@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .form {
+            padding: 10px;
+        }
+        .form > label {
+            display: block;
+            font: normal 18pt arial;
+        }
+        input {
+            border-radius: 5px;
+            padding: 5px;
+            border: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .form > #pais {          
+            border-style: solid ;
+            border-width: 2px;
+        }
+        p {
+            font: normal 14pt arial;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form">
+            <label for="pais">Informe seu país</label>
+            <input type="text" name="pais" id="pais">
+            <input type="button" value="Verificar" onclick="validar()">
+        </div>
+        <div class="resposta"></div>
+    </div>
+
+    <script>
+        function validar() {
+            var pais = document.getElementById("pais").value;
+            var divResposta = document.querySelector("div.resposta");
+            if (pais == "brasil") {
+                divResposta.innerHTML = `<p>Você mora no país ${pais}<p>
+                    <p>Você é brasileiro</p>`;
+            } else {
+                divResposta.innerHTML = `<p>Você mora no país ${pais}<p>
+                    <p>Você é estrangeiro</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
